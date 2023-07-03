@@ -556,7 +556,6 @@ runs:
           || ''
       }}
       ${{ inputs.target }}
-      --exclude $(git submodule --quiet foreach pwd); do echo "${path#$(pwd)/}/"; done)
       ;
       set +x
     # yamllint enable rule:line-length
