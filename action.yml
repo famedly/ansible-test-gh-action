@@ -581,11 +581,4 @@ runs:
     shell: bash
     working-directory: ${{ steps.collection-metadata.outputs.checkout-path }}
 
-  - name: Log the next step action
-    if: steps.ansible-test-flags.outputs.coverage-arg != ''
-    run: >-
-      echo ▷ Sending the coverage data over to
-      https://codecov.io/gh/${{ github.repository }}...
-    shell: bash
-
 ...
